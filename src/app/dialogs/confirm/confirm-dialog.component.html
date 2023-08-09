@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>{{ data.title }}</h1>
+
+<div mat-dialog-content *ngIf="data.content">{{ data.content }}</div>
+
+<div mat-dialog-actions class="justify-content-end">
+	<button mat-button (click)="dialogRef.close(false)">Fechar</button>
+
+	<button mat-button (click)="dialogRef.close(data.id)" [color]="data.color">
+		Confirmar
+	</button>
+</div>
