@@ -1,27 +1,45 @@
-# Crud Alunos
+# Crud Students
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.8.
+Goals:
+
+1. Use HTML5, CSS, TypeScript, JavaScript as you see fit.
+2. Handle the data received from the api
+3. Use components, class and services
+4. Create Student List
+5. It must contain the INCLUDE, ALTER AND EXCLUDE operations
+6. It should contain a search field in the list of students
+7. Friendly and intuitive layout
+8. Use Angular Material
+9. A good code structure is indentation 
+    - I used prettier + eslint for this
+
+
+## Prerequisites
+
+To run this project you need to have the Angular framework installed locally, details for the installation visit this link: [setup-local](https://angular.io/guide/setup-local)
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Run `npm install` to install dependencies.
+2. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you
+   change any of the source files.
 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Libraries used with [angular (v. 16)](https://angular.io/) framework
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+[bootstrap](https://getbootstrap.com/) - Utility classes
 
-## Running end-to-end tests
+[eslint](https://eslint.org/) - code structuring and indentation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+[prettier](https://prettier.io/)  - code structuring and indentation
 
-## Further help
+[angular material](https://material.angular.io/) - Ui Kit
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[RxJS](https://rxjs.dev/) - Reactive programming
+
+## Api
+
+[API](https://api-teste-laserchip-2023-200528dc7097.herokuapp.com)
