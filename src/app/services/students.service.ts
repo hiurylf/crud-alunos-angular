@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { IStudents } from '../interfaces/students';
+import { IStudents } from '@interfaces/students';
 
 @Injectable({
 	providedIn: 'root',
@@ -20,11 +20,15 @@ export class StudentsService {
 		return this.http.post<IStudents>(`${this.apiUrl}`, data);
 	}
 
-	edit(data: IStudents): Observable<IStudents> {
-		return this.http.patch<IStudents>(`${this.apiUrl}`, data);
+	edit({ id, ...data }: IStudents): Observable<IStudents> {
+		return this.http.put<IStudents>(`${this.apiUrl}/${id}`, data);
 	}
 
 	deleteById(id: number): Observable<void> {
 		return this.http.delete<void>(`${this.apiUrl}/${id}`);
+	}
+
+	getOneById(id: number): Observable<void> {
+		return this.http.get<void>(`${this.apiUrl}/${id}`);
 	}
 }
