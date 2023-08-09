@@ -1,1 +1,28 @@
-Home
+<header>
+	<mat-toolbar color="primary" class="d-flex justify-content-between">
+		<div class="d-flex align-items-center">
+			<mat-icon class="me-3">school</mat-icon>
+			<span>Lista de Estudantes</span>
+		</div>
+
+		<div>
+			<button mat-icon-button (click)="onCreate()">
+				<mat-icon>person_add</mat-icon>
+			</button>
+		</div>
+	</mat-toolbar>
+</header>
+
+<mat-progress-bar *ngIf="loading$ | async" mode="indeterminate">
+</mat-progress-bar>
+
+<main class="p-4">
+	<app-search
+		(searchChange)="onSearchChange($event)"
+		[placeholder]="searchPlaceholder"></app-search>
+
+	<app-student-list
+		[students]="students$ | async"
+		(edit)="onEdit($event)"
+		(delete)="onDelete($event)"></app-student-list>
+</main>
